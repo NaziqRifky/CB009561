@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+   /* font-family: 'Oswald', sans-serif;*/
+   font-family: 'Oswald', sans-serif;
+}
+
+.header{
+    min-height: 50vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(pictures/donations.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 90px;
+    animation-name: ima_ani;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes ima_ani{
+    0%{opacity: 0%;}
+    25%{opacity: 0%;}
+    50%{opacity: 0%;}
+    80%{opacity: 0%;}
+}
+.navigationlinks{
+    flex: 1;
+    text-align:right;
+
+}
+
+.navigationlinks {
+    border:solid rgba(97, 145, 137, 0.555);
+    border-style: groove;
+    border-left: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+    padding:10px;
+    animation-name: navborder_ani;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes navborder_ani{
+    0%{opacity: 0%;}
+    25%{opacity: 0%;}
+    50%{opacity: 0%;}
+    80%{opacity: 0%;}
+}
+
+
+.navigationlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navigationlinks ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.navigationlinks ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    margin-left: 0%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(to right,rgb(109, 148, 133),rgb(0, 255, 242),rgb(133, 255, 214)) ;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+.navigationlinks ul li a:hover::before{
+    transform:scaleX(1);
+    transform-origin: bottom left;
+}
+.navigationlinks ul li a span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    margin-left: 0%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(to right,rgb(133, 255, 214),rgb(0, 255, 242),rgb(109, 148, 133)) ;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+.navigationlinks ul li a span:hover::before{
+    transform:scaleX(1);
+    transform-origin: bottom left;
+}
+.navigationlinks ul li a:hover{
+
+    color:rgb(107, 187, 180);
+    display: block;
+}
+
+.textinfo{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(111, 153, 118, 0.274);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
+.textinfo h1{
+    font-size: 40px;
+    color:rgb(147, 214, 214) ;
+    animation-name: head_ani;
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
+@keyframes head_ani{
+    25%{color: rgb(156, 216, 213);}
+    50%{color: rgb(161, 221, 223);}
+    75%{color: rgb(186, 240, 222);}
+    25%{font-size: 50px;}
+    50%{font-size: 50px;}
+    75%{font-size: 50px;}
+    
+    
+}
+
+@media(max-width:1000px){
+    .navigationlinks ul li a{
+        font-size: 15px;
+    }
+    .textinfo h1{
+        font-size: 20px;
+    }
+    @keyframes head_ani{
+        25%{color: rgb(16, 139, 0);}
+        50%{color: rgb(255, 153, 0);}
+        75%{color: rgb(141, 0, 0);}
+        25%{font-size: 35px;}
+        50%{font-size: 35px;}
+        75%{font-size: 35px;}
+        
+    }
+    .textinfo p{
+        font-size: 15px;
+    }
+}
+
+/*-----------doantions-------------*/
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.donationsback{
+    background:rgb(137, 255, 216);
+    width: 100%;
+    padding: 20px 0px;
+}
+.donations{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.donations h1{
+    color: rgb(0, 0, 0);
+    font-size: 65px;
+}
+.donations p{
+    font-size: 18px ;
+    margin-bottom: 6%;
+}
+.donations h2{
+    margin-top: 3%;
+    text-align: center;
+    font-size: 29px;
+}
+.donations_col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    box-sizing:border-box ;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.7);
+}
+
+
+.donations_col img{
+    width: 100%;
+    border-radius: 10px;
+    box-sizing:border-box ;
+    transition: 0.5s;
+}
+.donations_col img:hover{
+    width: 100%;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.7);
+}
+
+.donations_col p{
+    padding: 0;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    transition: 0.5s;
+}
+.donations_col p:hover{
+    border-radius: 10px;
+    background-color:rgba(132, 0, 255, 0.233);
+}
+
+.donations_col h3{
+    margin-top: 16px;
+    margin-bottom: 14px;
+    text-align: center;
+
+}
+.donations_col button{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 3px;
+}
+@media(max-width:1000px){
+    .donations h1{
+        font-size: 30px;
+    }
+}
+
+/*-------------Footer----------------*/
+
+.container{
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 3px;
+
+}
+.container:hover{
+    background: grey;
+    transition: 1s;
+}
+
+.footer{
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.footerh{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.footerh h2{
+    margin-bottom: 7%;
+}
+.footerh a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    transition: 0.5s;
+}
+
+.footerh a:hover{
+    color: rgb(0, 255, 179);
+    font-size: 20px;
+}   
+@media(max-width:1000px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+
+
